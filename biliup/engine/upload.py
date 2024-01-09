@@ -98,18 +98,20 @@ class UploadBase:
 
     @staticmethod
     def remove_filelist(file_list: List[FileInfo]):
-        for f in file_list:
-            UploadBase.remove_file(f.video)
-            if f.danmaku is not None:
-                UploadBase.remove_file(f.danmaku)
+        pass
+        # for f in file_list:
+        #     UploadBase.remove_file(f.video)
+        #     if f.danmaku is not None:
+        #         UploadBase.remove_file(f.danmaku)
 
     @staticmethod
     def remove_file(file: str):
-        try:
-            os.remove(file)
-            logger.info(f'删除 - {file}')
-        except:
-            logger.warning(f'删除失败 - {file}')
+        pass
+        # try:
+        #     os.remove(file)
+        #     logger.info(f'删除 - {file}')
+        # except:
+        #     logger.warning(f'删除失败 - {file}')
 
     def upload(self, file_list: List[FileInfo]) -> List[FileInfo]:
         raise NotImplementedError()
